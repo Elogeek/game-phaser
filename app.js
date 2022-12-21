@@ -1,8 +1,11 @@
 // Init phaser
 const config = {
+
     width: 800,
     height: 600,
     backgroundColor: 'rgba(178, 222, 39)',
+    //The title of your game will appear in the Dev Tools
+    title: "Neko Game",
     type: Phaser.AUTO,
     //add gravity for the cat to fall
     physics: {
