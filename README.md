@@ -1,2 +1,2 @@
-# game-phaser
-game with  phaser
+# neko-game
+game with phaser3
