@@ -3,7 +3,7 @@ const config = {
     width: 700,
     height: 400,
     type: Phaser.AUTO,
-    //add gravity for neko chute
+    //add gravity for the cat to fall
     physics: {
         default: 'arcade',
         arcade: {
@@ -29,11 +29,11 @@ function create() {
     neko = this.physics.add.image(100, 100, 'neko');
     neko.body.collideWorldBounds = true;
     cursors = this.input.keyboard.createCursorKeys();
-
 }
 
 function update() {
-    // pour que le perso s'arrête lorsque l'user n'appuie pas sur les touches
+
+    // so that the cat stops when the user does not press the keys to move it
     neko.setVelocityX(0);
 
     if(cursors.up.isDown){
