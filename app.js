@@ -1,7 +1,8 @@
 // Init phaser
 const config = {
-    width: 700,
-    height: 400,
+    width: 800,
+    height: 600,
+    backgroundColor: 'rgba(178, 222, 39)',
     type: Phaser.AUTO,
     //add gravity for the cat to fall
     physics: {
