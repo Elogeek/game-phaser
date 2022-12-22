@@ -25,6 +25,7 @@ const config = {
 let game = new Phaser.Game(config);
 let neko;
 let cursors;
+
 function preload() {
     this.load.image('neko', 'assets/img/neko.png');
 }
