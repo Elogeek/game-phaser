@@ -3,7 +3,6 @@ const config = {
 
     width: 800,
     height: 600,
-    backgroundColor: 'rgba(178, 222, 39)',
     //The title of your game will appear in the Dev Tools
     title: "Neko Game",
     type: Phaser.AUTO,
@@ -25,15 +24,24 @@ const config = {
 let game = new Phaser.Game(config);
 let neko;
 let cursors;
+let background;
 
 function preload() {
+    this.load.image('background', "assets/img/background.jpeg")
     this.load.image('neko', 'assets/img/neko.png');
 }
 
 function create() {
     neko = this.physics.add.image(100, 100, 'neko');
     neko.body.collideWorldBounds = true;
+    neko.setDepth(10);
     cursors = this.input.keyboard.createCursorKeys();
+
+    // create background of game
+    background = this.add.image(0, 0, "background");
+    background.setOrigin(0, 0);
+    background.setDisplaySize(800, 600);
+    background.setScrollFactor(0);
 }
 
 function update() {
